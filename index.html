@@ -10,14 +10,15 @@
 </head>
 <body>
     <main class="page-content">
-        <section>
+        <section class="search-infos">
+            <img class="f1-logo" src="./images/logo-formula-1.png" alt="logo da fórmula 1 (a letra f e o número 1 na cor vermelha)">
             <h1>
                 who was the world champion?
             </h1>
             <p>
-                Select an year to find out
+                select an year to find out
             </p>
-            <div class="search-buttons">
+            <div>
                 <select class="years">
                     <option selected>
                         year
@@ -27,11 +28,14 @@
                     search
                 </button>
             </div>
-        </section>     
-        <section class="champion-infos">
+        </section>   
+        <section class="answer-infos">
             <img class="champion-photo" src="">
-            <p class="champion-txt"></p> 
+            <p class="champion-txt"></p>
         </section>
-    </main>       
+        <p class="error-txt"></p>
+    </main>  
+    <script src="./scripts/year-list.js"></script> 
+    <script src="./scripts/result.js"></script>
 </body>
 </html>
