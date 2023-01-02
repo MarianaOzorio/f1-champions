@@ -42,7 +42,7 @@ h1 {
     margin-top: 8px;
 }
 
-select,
+.select-years,
 .btn-search {
     width: 150px;
     height: 4vh;
@@ -50,6 +50,10 @@ select,
     font-size: 1em;
     text-align: center;
     border: none;
+}
+
+.select-years {
+    background-color: #fff;
 }
 
 .btn-search {
@@ -102,6 +106,10 @@ footer a {
     color: #656566;
 }
 
+footer a:hover {
+    color: #FB1E00
+}
+
 @media only screen and (max-width: 768px) {
 
     .f1-logo {
@@ -118,7 +126,7 @@ footer a {
         font-size: 1em;
     }
 
-    select,
+    .select-years,
     .btn-search {
         width: 120px;
     }

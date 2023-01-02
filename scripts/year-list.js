@@ -1,5 +1,5 @@
 function CreateYearList() {
-    year = document.querySelector('.years') 
+    year = document.querySelector('.select-years') 
     for(let i = 1950; i<2023; i++){ 
         option = document.createElement("option") 
         option.value = i 
