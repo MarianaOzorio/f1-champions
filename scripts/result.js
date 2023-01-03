@@ -5,6 +5,7 @@ function showChampion() {
     let resultTxt = document.querySelector('.champion-txt')
     let errorTxt = document.querySelector('.error-txt')
     let selectYears = document.querySelector('.select-years')
+    let loader = document.querySelector('.loader')
 
 
     fetch("champions.json").then((response) => {
@@ -20,17 +21,23 @@ function showChampion() {
                         return;         
                     } else {
                         if(driver.year == selectedValue){
+                            setTimeout(() => {
+                                loader.style.display = "inline-block";  
+                                answerContainer.style.display = "none";
+                                errorTxt.style.display = "none";
+                            }, 0)
+                            setTimeout(() => {
+                            loader.style.display = "none";    
                             answerContainer.style.display = "table";
                             errorTxt.style.display = "none";
                             selectYears.style.border = "none";
                             document.querySelector('.champion-photo').setAttribute('src', driver.photoURL);
                             resultTxt.innerHTML = `the world champion in ${selectedValue} was ${driver.name} for ${driver.team}`;
+                        }, 1000)
                         }
-                    }
-                }
+                    } 
+                } 
             })
         })         
     })
 }
-
-  
